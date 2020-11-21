@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  creationTimestamp: "2020-11-20T13:32:03Z"
+  finalizers:
+  - networking.gke.io/ingress-finalizer-V2
+  generation: 1
+  name: ingresskubernetes
+  namespace: default
+  resourceVersion: "359417"
+  selfLink: /apis/extensions/v1beta1/namespaces/default/ingresses/ingresskubernetes
+  uid: 9baa74b6-cd93-43ef-b8b2-87c66191d9a8
+spec:
+  backend:
+    serviceName: servicekubernetes
+    servicePort: 8989
+status:
+  loadBalancer: {}

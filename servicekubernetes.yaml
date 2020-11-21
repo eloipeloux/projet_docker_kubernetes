@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-11-20T13:28:36Z"
+  labels:
+    app: projectkubernetes
+  name: servicekubernetes
+  namespace: default
+  resourceVersion: "358495"
+  selfLink: /api/v1/namespaces/default/services/servicekubernetes
+  uid: 730d9df3-adfa-4415-ab9f-8ea11771aaa7
+spec:
+  clusterIP: 10.56.3.254
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31474
+    port: 8989
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: projectkubernetes
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
